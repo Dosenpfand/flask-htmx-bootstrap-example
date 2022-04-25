@@ -2,12 +2,19 @@
 A minimal example of a Flask web application using htmx and Bootstrap for the front end.
 
 ## Components
-The application uses the following components
+The application uses the following components.
 1. [Flask](https://flask.palletsprojects.com) for the backend
 2. [htmx](https://htmx.org/) for asynchronous HTTP requests
 3. [Bootstrap](https://getbootstrap.com/) for front end layout
 
+## File Structure
+- ```static/``` contains the Bootstrap and htmx assets.
+- ```templates/``` contains the Jinja2 templates used by Flask.
+- ```app.py``` is the Flask application's implementation
+
 ## Run
+To run the application locally follow these steps.
+
 1. Create and activate a virtual environment
     ```
     python -m venv venv
