@@ -17,11 +17,6 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="{{ url_for('uuids') }}">Home</a>
             </li>
-            <!--
-            <li class="nav-item">
-              <a class="nav-link" href="{{ url_for('uuids') }}">UUIDs</a>
-            </li>
-            -->
           </ul>
         </div>
       </div>
@@ -30,7 +25,7 @@
     <main class="container">
       <div class="bg-light p-5 rounded">
         <h1>{{ title }}</h1>
-        <p class="lead">
+        <p>
           {% block content %}
           {{ content }}
           {% endblock %}

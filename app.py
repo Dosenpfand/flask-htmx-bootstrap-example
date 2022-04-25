@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route('/')
 @app.route('/uuids')
 def uuids():
-    title = 'UUIDs - SAD'
+    title = 'SAD.BZ'
     acronym = 'SAD'
     numbers = generate_uuids()
     return render_template('uuids.html', title=title, acronym=acronym, numbers=numbers)

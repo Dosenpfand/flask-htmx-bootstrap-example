@@ -1,4 +1,4 @@
-<table class="table">
+<table class="table table-striped table-hover">
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -6,8 +6,8 @@
         <th scope="col">Dangerous</th>
       </tr>
     </thead>
-    {% for index, number, is_dangerous in numbers %}
     <tbody>
+    {% for index, number, is_dangerous in numbers %}
       <tr>
         <th scope="row">{{ index }}</th>
         <td><span class="font-monospace">{{ number }}</span></td>
