@@ -23,7 +23,7 @@
                 <p class="card-text">If you don't like them just generate new ones.</p>
                 <a class="btn btn-primary"
                     href="{{ url_for('uuids') }}"
-                    hx-get="/get-uuids"
+                    hx-get="/uuid-table"
                     hx-target="#uuids"
                     placeholder="Generating...">Generate new UUIDs</a>
                 </div>
@@ -34,7 +34,7 @@
 <div class="container">
     <div class="row">
         <div class="col" id="uuids">
-        {% include 'uuid-numbers.html' %}
+        {% include 'uuid-table.html' %}
         </div>
     </div>
 </div>

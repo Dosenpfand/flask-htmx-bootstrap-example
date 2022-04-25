@@ -5,18 +5,19 @@ import random
 
 app = Flask(__name__)
 
+
 @app.route('/')
-@app.route('/uuids')
 def uuids():
     title = 'SAD.BZ'
-    acronym = 'SAD'
-    numbers = generate_uuids()
-    return render_template('uuids.html', title=title, acronym=acronym, numbers=numbers)
+    uuid_rows = generate_uuids()
+    return render_template('uuids.html', title=title, uuid_rows=uuid_rows)
 
-@app.route('/get-uuids')
-def get_uuids():
-    numbers = generate_uuids()
-    return render_template('uuid-numbers.html', numbers=numbers)
+
+@app.route('/uuid-table')
+def uuid_table():
+    uuid_rows = generate_uuids()
+    return render_template('uuid-table.html', uuid_rows=uuid_rows)
+
 
 def generate_uuids(count=25):
     rows = []
