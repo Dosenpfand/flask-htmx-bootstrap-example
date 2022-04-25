@@ -25,6 +25,9 @@ The application uses the following components
     ```
 4. Open in your browser: http://localhost:5000
 
+## Live Demo
+A live version can be reached at https://sad.bz
+
 ## Deploy
 ```application.service``` and ```wsgi.py``` can be used to deploy the application using Gunicorn. To use nginx as a proxy the following config snippet can be used inside a ```server``` section.
 
