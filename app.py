@@ -18,9 +18,9 @@ def get_uuids():
     numbers = generate_uuids()
     return render_template('uuid-numbers.html', numbers=numbers)
 
-def generate_uuids():
+def generate_uuids(count=25):
     rows = []
-    for i in range(1, 11):
+    for i in range(1, count+1):
         row = (i, str(uuid.uuid4()), bool(random.randrange(0, 2)))
         rows.append(row)
     return rows
