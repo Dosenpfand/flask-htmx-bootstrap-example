@@ -1,0 +1,39 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Here you go!</h5>
+          <p class="card-text">
+              These are your lucky UUIDs for today.
+              Please take into account the danger levels!
+          </p>
+          <a class="btn btn-primary" href="#uuids">Scroll down</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Generate new ones</h5>
+          <p class="card-text">If you don't like them just generate new ones.</p>
+          <a class="btn btn-primary"
+            href="{{ url_for('uuids') }}"
+            hx-get="/get-uuids"
+            hx-target="#uuids"
+            placeholder="Generating...">Generate new UUIDs</a>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div id="uuids">
+{% include 'uuid-numbers.html' %}
+</div>
+
+
+
+{% endblock %}

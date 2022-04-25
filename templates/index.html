@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title }}</title>
+    <link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet">
+    <script src="{{ url_for('static', filename='htmx.min.js') }}" defer></script>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{{ url_for('uuids') }}">{{ acronym }}</a>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{{ url_for('uuids') }}">Home</a>
+            </li>
+            <!--
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('uuids') }}">UUIDs</a>
+            </li>
+            -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container">
+      <div class="bg-light p-5 rounded">
+        <h1>{{ title }}</h1>
+        <p class="lead">
+          {% block content %}
+          {{ content }}
+          {% endblock %}
+        </p>
+      </div>
+    </main>
+
+    <footer class="footer mt-auto py-3 bg-light">
+      <div class="container text-center">
+        <span class="text-muted fs-6">🄯 2022 SAD Inc.</span>
+      </div>
+    </footer>
+
+  </body>
+</html>
