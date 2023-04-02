@@ -1,22 +1,24 @@
-<table class="table table-striped table-hover">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">UUID</th>
-        <th scope="col">Dangerous</th>
-      </tr>
-    </thead>
-    <tbody>
-    {% for index, number, is_dangerous in uuid_rows %}
-      <tr>
-        <th scope="row">{{ index }}</th>
-        <td><span class="font-monospace">{{ number }}</span></td>
-        {% if is_dangerous %}
-        <td><span class="badge bg-danger">YES</span></td>
-        {% else %}
-        <td><span class="badge bg-success">NO</span></td>
-        {% endif %}
-      </tr>
-    {% endfor %}
-    </tbody>
-</table>
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">UUID</th>
+            <th scope="col">Secure</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for index, number, secure in uuid_rows %}
+            <tr>
+                <th scope="row">{{ index }}</th>
+                <td><span class="font-monospace">{{ number }}</span></td>
+                {% if secure %}
+                    <td><span class="badge bg-success">YES</span></td>
+                {% else %}
+                    <td><span class="badge bg-danger">NO</span></td>
+                {% endif %}
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
