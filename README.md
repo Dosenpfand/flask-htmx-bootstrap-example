@@ -8,12 +8,13 @@ The application uses the following components.
 3. [Bootstrap](https://getbootstrap.com/) for front end layout
 
 ## File Structure
-- ```static/``` contains the Bootstrap and htmx assets.
-- ```templates/``` contains the Jinja2 templates used by Flask.
-- ```app.py``` is the Flask application's implementation
+- ```app/static/``` contains the Bootstrap and htmx assets.
+- ```app/templates/``` contains the Jinja2 templates used by Flask.
+- ```app/main.py``` is the Flask application's implementation
 
 ## Run
-To run the application locally follow these steps.
+
+To run the application locally use `docker-compose up -d`. Alternatively, follow these steps.
 
 1. Create and activate a virtual environment
     ```
@@ -27,7 +28,7 @@ To run the application locally follow these steps.
 3. Run the app
     ```
     export FLASK_ENV=development
-    export FLASK_APP=app
+    export FLASK_APP=app.main
     flask run
     ```
 4. Open in your browser: http://localhost:5000
